@@ -1,6 +1,6 @@
 {
     "name":        "tika-server",
-    "version":     "0.9.2",
+    "version":     "0.9.3",
     "description": "Apache Tika Server as a Background Service",
     "keywords":    [ "apache", "tika", "server", "background", "service" ],
     "main":        "tika-server-api.js",

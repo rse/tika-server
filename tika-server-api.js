@@ -121,11 +121,12 @@ class TikaServer extends EventEmitter {
 
         /*  determine options  */
         options = Object.assign({}, {
-            endpoint: "tika",
-            type:     "application/octet-stream",
-            accept:   "text/xml",
-            response: "blob",
-            filename: ""
+            endpoint:  "tika",
+            type:       "application/octet-stream",
+            accept:    "text/xml",
+            response:  "blob",
+            maxlength: 256 * 1024 * 1024,
+            filename:  ""
         }, options)
 
         /*  query Apache Tika Server process via its HTTP interface  */
@@ -137,7 +138,8 @@ class TikaServer extends EventEmitter {
                 "Accept":       options.accept
             },
             data: content,
-            responseType: options.response
+            responseType:     options.response,
+            maxContentLength: options.maxlength
         }
         if (options.filename !== "") {
             let filename = path.basename(options.filename)

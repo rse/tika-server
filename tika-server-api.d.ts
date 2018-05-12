@@ -49,6 +49,7 @@ declare class TikaServer {
             type?: string      /* default: "application/octet-stream" */
             accept?: string    /* default: "text/xml" */
             response?: string  /* default: "blob" */
+            maxlength: number  /* default: 256 * 1024 * 1024 */
             filename?: string  /* default: "" */
         }
     ): Promise<any>

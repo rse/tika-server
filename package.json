@@ -1,0 +1,48 @@
+{
+    "name":        "tika-service",
+    "version":     "0.9.0",
+    "description": "Apache Tika Server as a Background Service",
+    "keywords":    [ "apache", "tika" ],
+    "main":        "tika-service-api.js",
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/rse/tika-service.git"
+    },
+    "author": {
+        "name":  "Ralf S. Engelschall",
+        "email": "rse@engelschall.com",
+        "url":   "http://engelschall.com"
+    },
+    "license":  "MIT",
+    "homepage": "https://github.com/rse/tika-service",
+    "bugs":     "https://github.com/rse/tika-service/issues",
+    "devDependencies": {
+        "babel-eslint":            "8.2.3",
+        "eslint":                  "4.19.1",
+        "eslint-config-standard":  "11.0.0",
+        "eslint-plugin-standard":  "3.1.0",
+        "eslint-plugin-promise":   "3.7.0",
+        "eslint-plugin-import":    "2.11.0",
+        "eslint-plugin-node":      "6.0.1"
+    },
+    "dependencies": {
+        "promise":                 "8.0.1",
+        "request":                 "2.85.0",
+        "sprintfjs":               "1.2.9",
+        "tar":                     "4.4.2",
+        "which":                   "1.3.0",
+        "rimraf":                  "2.6.2",
+        "mz":                      "2.7.0",
+        "axios":                   "0.18.0",
+        "find-free-port":          "1.2.0",
+        "eventemitter3":           "3.1.0"
+    },
+    "engines": {
+        "node":                    ">=8.0.0"
+    },
+    "scripts": {
+        "prepublishOnly": "eslint --config eslint.yaml tika-service-*.js",
+        "install":        "node ./tika-service-npm.js install",
+        "uninstall":      "node ./tika-service-npm.js uninstall"
+    }
+}

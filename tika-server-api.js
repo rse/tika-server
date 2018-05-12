@@ -39,7 +39,7 @@ class TikaServer extends EventEmitter {
 
         /*  determine options  */
         this.options = Object.assign({}, {
-            javaBinary:   "/usr/opkg/bin/java",
+            javaBinary:   "java",
             javaOptions:  "-server -Xms1G -Xmx1G",
             tikaBinary:   path.join(__dirname, "tika-server-cli.jar"),
             tikaConfig:   path.join(__dirname, "tika-server-cli.xml"),

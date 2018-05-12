@@ -1,12 +1,12 @@
 {
-    "name":        "tika-service",
+    "name":        "tika-server",
     "version":     "0.9.0",
     "description": "Apache Tika Server as a Background Service",
-    "keywords":    [ "apache", "tika" ],
-    "main":        "tika-service-api.js",
+    "keywords":    [ "apache", "tika", "server", "background", "service" ],
+    "main":        "tika-server-api.js",
     "repository": {
         "type": "git",
-        "url":  "https://github.com/rse/tika-service.git"
+        "url":  "https://github.com/rse/tika-server.git"
     },
     "author": {
         "name":  "Ralf S. Engelschall",
@@ -14,8 +14,8 @@
         "url":   "http://engelschall.com"
     },
     "license":  "MIT",
-    "homepage": "https://github.com/rse/tika-service",
-    "bugs":     "https://github.com/rse/tika-service/issues",
+    "homepage": "https://github.com/rse/tika-server",
+    "bugs":     "https://github.com/rse/tika-server/issues",
     "devDependencies": {
         "babel-eslint":            "8.2.3",
         "eslint":                  "4.19.1",
@@ -41,8 +41,8 @@
         "node":                    ">=8.0.0"
     },
     "scripts": {
-        "prepublishOnly": "eslint --config eslint.yaml tika-service-*.js",
-        "install":        "node ./tika-service-npm.js install",
-        "uninstall":      "node ./tika-service-npm.js uninstall"
+        "prepublishOnly": "eslint --config eslint.yaml tika-server-*.js",
+        "install":        "node ./tika-server-npm.js install",
+        "uninstall":      "node ./tika-server-npm.js uninstall"
     }
 }

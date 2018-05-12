@@ -1,5 +1,5 @@
 /*
-**  Tika-Service -- Apache Tika Server as a Background Service
+**  Tika-Server -- Apache Tika Server as a Background Service
 **  Copyright (c) 2018 Ralf S. Engelschall <rse@engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
@@ -42,7 +42,7 @@ var downloadData = (url) => {
             url: url,
             encoding: null,
             headers: {
-                "User-Agent": "NPM/Tika-Service (tika-service-npm.js)"
+                "User-Agent": "NPM/Tika-Server (tika-server-npm.js)"
             }
         }
         ;(new Promise((resolve /*, reject  */) => {
@@ -91,7 +91,7 @@ var downloadData = (url) => {
 
 /*  common configuration  */
 var srcurl   = "http://www.apache.org/dist/tika/tika-server-1.18.jar"
-var destfile = path.join(__dirname, "tika-service-cli.jar")
+var destfile = path.join(__dirname, "tika-server-cli.jar")
 
 /*  main procedure  */
 if (process.argv.length !== 3) {

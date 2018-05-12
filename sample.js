@@ -1,8 +1,8 @@
 
-const TikaService = require(".")
+const TikaServer = require(".")
 
 ;(async () => {
-    const ts = new TikaService()
+    const ts = new TikaServer()
     ts.on("debug", (msg) => {
         console.log(`DEBUG: ${msg}`)
     })

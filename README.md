@@ -1,14 +1,14 @@
 
-Tika-Service
-============
+Tika-Server
+===========
 
 Apache Tika Server as a Background Service in Node.js
 
 <p/>
-<img src="https://nodei.co/npm/tika-service.png?downloads=true&stars=true" alt=""/>
+<img src="https://nodei.co/npm/tika-server.png?downloads=true&stars=true" alt=""/>
 
 <p/>
-<img src="https://david-dm.org/rse/tika-service.png" alt=""/>
+<img src="https://david-dm.org/rse/tika-server.png" alt=""/>
 
 About
 -----
@@ -21,17 +21,17 @@ Installation
 ------------
 
 ```shell
-$ npm install tika-service
+$ npm install tika-server
 ```
 
 Usage
 -----
 
 ```
-const TikaService = require("tika-service")
+const TikaServer = require("tika-server")
 
 ;(async () => {
-    const ts = new TikaService()
+    const ts = new TikaServer()
     ts.on("debug", (msg) => {
         console.log(`DEBUG: ${msg}`)
     })
@@ -48,25 +48,25 @@ const TikaService = require("tika-service")
 Motivation
 ----------
 
-The major differences to similar NPM modules and the motivation for the existence of Tika-Service are:
+The major differences to similar NPM modules and the motivation for the existence of Tika-Server are:
 
-1. Tika-Service, in contrast to the [tika](http://npmjs.com/tika) module,
+1. Tika-Server, in contrast to the [tika](http://npmjs.com/tika) module,
    does not depend on the native [java](http://npmjs.com/java) module.
    Instead, it just requires the `java` executable to be available.
 
-2. Tika-Service, in contrast to the [tika](http://npmjs.com/tika) module,
+2. Tika-Server, in contrast to the [tika](http://npmjs.com/tika) module,
    does not spawn Apache Tika for every query.
    Instead, it uses a continuously running Apache Tika Server in a background process.
 
-3. Tika-Service, in contrast to the [tika](http://npmjs.com/tika) module,
+3. Tika-Server, in contrast to the [tika](http://npmjs.com/tika) module,
    does not ship with an old Tika JAR.
    Instead, it automatically downloads and uses a more recent one.
 
-4. Tika-Service, in contrast to the [tika-server-client](http://npmjs.com/tika-server-client) module,
+4. Tika-Server, in contrast to the [tika-server-client](http://npmjs.com/tika-server-client) module,
    does not need a pre-installed Apache Tika Server.
    Instead, it automatically starts and stops a local instance of it in the background.
 
-5. Tika-Service, in contrast to the [tika-text-extract](http://npmjs.com/tika-text-extract) module,
+5. Tika-Server, in contrast to the [tika-text-extract](http://npmjs.com/tika-text-extract) module,
    does not use the hard-coded (default) TCP/IP port 9998 for the background Apache Tika Server process.
    Instead, it automatically determines and uses a free TCP/IP port on localhost.
 

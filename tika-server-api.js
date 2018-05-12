@@ -1,5 +1,5 @@
 /*
-**  Tika-Service -- Apache Tika Server as a Background Service
+**  Tika-Server -- Apache Tika Server as a Background Service
 **  Copyright (c) 2018 Ralf S. Engelschall <rse@engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
@@ -33,7 +33,7 @@ const EventEmitter   = require("eventemitter3")
 const axios          = require("axios")
 
 /*  the API class  */
-class TikaService extends EventEmitter {
+class TikaServer extends EventEmitter {
     constructor (options = {}) {
         super()
 
@@ -41,8 +41,8 @@ class TikaService extends EventEmitter {
         this.options = Object.assign({}, {
             javaBinary:   "/usr/opkg/bin/java",
             javaOptions:  "-server -Xms1G -Xmx1G",
-            tikaBinary:   path.join(__dirname, "tika-service-cli.jar"),
-            tikaConfig:   path.join(__dirname, "tika-service-cli.xml"),
+            tikaBinary:   path.join(__dirname, "tika-server-cli.jar"),
+            tikaConfig:   path.join(__dirname, "tika-server-cli.xml"),
             tikaOptions:  "--log info",
             tikaHost:     "127.0.0.1",
             tikaPortMin:  41000,
@@ -199,5 +199,5 @@ class TikaService extends EventEmitter {
 }
 
 /*  export API class  */
-module.exports = TikaService
+module.exports = TikaServer
 

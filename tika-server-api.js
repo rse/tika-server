@@ -122,7 +122,7 @@ class TikaServer extends EventEmitter {
         /*  determine options  */
         options = Object.assign({}, {
             endpoint:  "tika",
-            type:       "application/octet-stream",
+            type:      "application/octet-stream",
             accept:    "text/xml",
             response:  "blob",
             maxlength: 256 * 1024 * 1024,

@@ -51,7 +51,7 @@ Application Programming Interface
 ```ts
 declare class TikaServer {
     constructor(options?: {
-        javaBinary?: string   /* default: "/usr/opkg/bin/java" */
+        javaBinary?: string   /* default: "java" */
         javaOptions?: string  /* default: "-server -Xms1G -Xmx1G" */
         tikaBinary?: string   /* default: "${__dirname}/tika-server-cli.jar" */
         tikaConfig?: string   /* default: "${__dirname}/tika-server-cli.xml" */

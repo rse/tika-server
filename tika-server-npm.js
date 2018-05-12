@@ -101,7 +101,7 @@ if (process.argv.length !== 3) {
 if (process.argv[2] === "install") {
     /*  installation procedure  */
     if (!fs.existsSync(destfile)) {
-        console.log("++ fetching external Apache Tika server distribution JAR file")
+        console.log("++ fetching external Apache Tika Server distribution JAR file")
         downloadData(srcurl).then((data) => {
             fs.writeFileSync(destfile, data, { encoding: null })
             console.log("-- OK: done")
@@ -113,7 +113,7 @@ if (process.argv[2] === "install") {
 else if (process.argv[2] === "uninstall") {
     /*  uninstallation procedure  */
     if (fs.existsSync(destfile)) {
-        console.log("++ deleting local copy of external Apache Tika server distribution JAR file")
+        console.log("++ deleting local copy of external Apache Tika Server distribution JAR file")
         rimraf(destfile, (error) => {
             if (error !== null)
                 console.log(`** ERROR: ${error}`)

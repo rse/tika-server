@@ -63,8 +63,11 @@ class TikaServer extends EventEmitter {
         /*  resolve path to Java binary  */
         let javaBinary = await new Promise((resolve, reject) => {
             which(this.options.javaBinary, (error, filename) => {
-                if (error) reject(error)
-                else       resolve(filename)
+                if (error)
+                    reject(new Error("unable to find mandatory Java binary " +
+                        `"${this.options.javaBinary}" in your $PATH`))
+                else
+                    resolve(filename)
             })
         })
 

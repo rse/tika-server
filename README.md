@@ -17,6 +17,13 @@ This is a small JavaScript library for use in Node.js environments,
 providing the possibility to run Apache Tika Server as a local
 background service and query it through a frontend JavaScript API.
 
+NOTICE
+------
+
+The Apache Tika Server is written in [Java](https://java.com/)
+and hence this Node.js modules requires an installed `java`
+executable in the environment.
+
 Installation
 ------------
 

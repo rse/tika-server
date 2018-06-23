@@ -28,12 +28,8 @@
         "typescript":              "2.9.2"
     },
     "dependencies": {
-        "promise":                 "8.0.1",
-        "request":                 "2.87.0",
-        "sprintfjs":               "1.2.9",
+        "npm-install-fetch":       "0.9.6",
         "which":                   "1.3.1",
-        "rimraf":                  "2.6.2",
-        "mz":                      "2.7.0",
         "axios":                   "0.18.0",
         "find-free-port":          "1.2.0",
         "eventemitter3":           "3.1.0"
@@ -43,7 +39,11 @@
     },
     "scripts": {
         "prepublishOnly": "eslint --config eslint.yaml tika-server-*.js && tslint --config tslint.json tika-server-api.d.ts",
-        "install":        "node ./tika-server-npm.js install",
-        "uninstall":      "node ./tika-server-npm.js uninstall"
+        "install":        "npm-install-fetch"
+    },
+    "npm-install-fetch": {
+        "name":    "Apache Tika Server CLI 1.18",
+        "input":   "http://www.apache.org/dist/tika/tika-server-1.18.jar",
+        "output":  "tika-server-cli.jar"
     }
 }

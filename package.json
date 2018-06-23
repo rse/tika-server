@@ -17,15 +17,15 @@
     "homepage": "https://github.com/rse/tika-server",
     "bugs":     "https://github.com/rse/tika-server/issues",
     "devDependencies": {
-        "babel-eslint":            "8.2.3",
-        "eslint":                  "4.19.1",
+        "babel-eslint":            "8.2.4",
+        "eslint":                  "5.0.0",
         "eslint-config-standard":  "11.0.0",
         "eslint-plugin-standard":  "3.1.0",
         "eslint-plugin-promise":   "3.8.0",
         "eslint-plugin-import":    "2.12.0",
         "eslint-plugin-node":      "6.0.1",
         "tslint":                  "5.10.0",
-        "typescript":              "2.9.1"
+        "typescript":              "2.9.2"
     },
     "dependencies": {
         "promise":                 "8.0.1",

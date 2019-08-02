@@ -61,7 +61,7 @@ class TikaServer extends EventEmitter {
             throw new Error("Apache Tika Server process already running")
 
         /*  resolve path to Java binary  */
-        let javaBinary = await new Promise((resolve, reject) => {
+        const javaBinary = await new Promise((resolve, reject) => {
             which(this.options.javaBinary, (error, filename) => {
                 if (error)
                     reject(new Error("unable to find mandatory Java binary " +
@@ -133,19 +133,19 @@ class TikaServer extends EventEmitter {
         }, options)
 
         /*  query Apache Tika Server process via its HTTP interface  */
-        let request = {
+        const request = {
             method: "PUT",
             url:    `http://${this.options.tikaHost}:${this.port}/${options.endpoint}`,
             headers: {
                 "Content-Type": options.type,
-                "Accept":       options.accept
+                Accept:         options.accept
             },
             data: content,
             responseType:     options.response,
             maxContentLength: options.maxlength
         }
         if (options.filename !== "") {
-            let filename = path.basename(options.filename)
+            const filename = path.basename(options.filename)
             request.headers["Content-Disposition"] = `attachment; filename=${filename}`
         }
         this.emit("tika-query-request", request)

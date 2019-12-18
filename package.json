@@ -43,7 +43,7 @@
     },
     "npm-install-fetch": {
         "name":    "Apache Tika Server CLI 1.23",
-        "input":   "http://www.apache.org/dist/tika/tika-server-1.23.jar",
+        "input":   "http://archive.apache.org/dist/tika/tika-server-1.23.jar",
         "output":  "tika-server-cli.jar"
     }
 }

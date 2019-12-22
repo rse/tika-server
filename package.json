@@ -18,14 +18,14 @@
     "bugs":     "https://github.com/rse/tika-server/issues",
     "devDependencies": {
         "babel-eslint":            "10.0.3",
-        "eslint":                  "6.7.2",
+        "eslint":                  "6.8.0",
         "eslint-config-standard":  "14.1.0",
         "eslint-plugin-standard":  "4.0.1",
         "eslint-plugin-promise":   "4.2.1",
         "eslint-plugin-import":    "2.19.1",
         "eslint-plugin-node":      "10.0.0",
         "tslint":                  "5.20.1",
-        "typescript":              "3.7.3"
+        "typescript":              "3.7.4"
     },
     "dependencies": {
         "npm-install-fetch":       "1.0.8",

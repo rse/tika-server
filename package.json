@@ -17,15 +17,15 @@
     "homepage": "https://github.com/rse/tika-server",
     "bugs":     "https://github.com/rse/tika-server/issues",
     "devDependencies": {
-        "babel-eslint":            "10.0.3",
+        "babel-eslint":            "10.1.0",
         "eslint":                  "6.8.0",
         "eslint-config-standard":  "14.1.0",
         "eslint-plugin-standard":  "4.0.1",
         "eslint-plugin-promise":   "4.2.1",
-        "eslint-plugin-import":    "2.20.0",
+        "eslint-plugin-import":    "2.20.1",
         "eslint-plugin-node":      "11.0.0",
-        "tslint":                  "6.0.0",
-        "typescript":              "3.7.5"
+        "tslint":                  "6.1.0",
+        "typescript":              "3.8.3"
     },
     "dependencies": {
         "npm-install-fetch":       "1.0.9",
@@ -42,8 +42,8 @@
         "install":        "npm-install-fetch"
     },
     "npm-install-fetch": {
-        "name":    "Apache Tika Server CLI 1.23",
-        "input":   "http://archive.apache.org/dist/tika/tika-server-1.23.jar",
+        "name":    "Apache Tika Server CLI 1.24",
+        "input":   "http://archive.apache.org/dist/tika/tika-server-1.24.jar",
         "output":  "tika-server-cli.jar"
     }
 }

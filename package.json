@@ -19,12 +19,12 @@
     "devDependencies": {
         "babel-eslint":            "10.1.0",
         "eslint":                  "6.8.0",
-        "eslint-config-standard":  "14.1.0",
+        "eslint-config-standard":  "14.1.1",
         "eslint-plugin-standard":  "4.0.1",
         "eslint-plugin-promise":   "4.2.1",
-        "eslint-plugin-import":    "2.20.1",
-        "eslint-plugin-node":      "11.0.0",
-        "tslint":                  "6.1.0",
+        "eslint-plugin-import":    "2.20.2",
+        "eslint-plugin-node":      "11.1.0",
+        "tslint":                  "6.1.1",
         "typescript":              "3.8.3"
     },
     "dependencies": {
@@ -42,8 +42,8 @@
         "install":        "npm-install-fetch"
     },
     "npm-install-fetch": {
-        "name":    "Apache Tika Server CLI 1.24",
-        "input":   "http://archive.apache.org/dist/tika/tika-server-1.24.jar",
+        "name":    "Apache Tika Server CLI 1.24.1",
+        "input":   "http://archive.apache.org/dist/tika/tika-server-1.24.1.jar",
         "output":  "tika-server-cli.jar"
     }
 }

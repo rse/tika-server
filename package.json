@@ -34,7 +34,7 @@
         "eventemitter3":           "4.0.7"
     },
     "engines": {
-        "node":                    ">=8.0.0"
+        "node":                    ">=10.0.0"
     },
     "scripts": {
         "prepublishOnly": "eslint --config eslint.yaml tika-server-*.js && tslint --config tslint.json tika-server-api.d.ts",

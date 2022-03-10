@@ -171,7 +171,7 @@ class TikaServer extends EventEmitter {
     }
 
     /*  query the Apache Tika Server service for text extraction only  */
-    async queryText (content, options = {}) {
+    async extractText (content, options = {}) {
         /*  determine options  */
         options = Object.assign({}, options, {
             endpoint: "tika",

@@ -43,7 +43,7 @@ const TikaServer = require("tika-server")
         console.log(`DEBUG: ${msg}`)
     })
     await ts.start()
-    await ts.queryText("foo").then((data) => {
+    await ts.extractText("foo").then((data) => {
         console.log(data)
     })
     await ts.stop()
@@ -95,7 +95,7 @@ declare class TikaServer {
         }
     ): Promise<object>
 
-    public queryText(
+    public extractText(
         content: any,
         options?: {
             type?: string      /* default: "application/octet-stream" */

@@ -34,15 +34,15 @@
         "eventemitter3":           "4.0.7"
     },
     "engines": {
-        "node":                    ">=10.0.0"
+        "node":                    ">=12.0.0"
     },
     "scripts": {
         "prepublishOnly": "eslint --config eslint.yaml tika-server-*.js && tslint --config tslint.json tika-server-api.d.ts",
         "install":        "npm-install-fetch"
     },
     "npm-install-fetch": {
-        "name":    "Apache Tika Server CLI 1.26",
-        "input":   "http://archive.apache.org/dist/tika/tika-server-1.26.jar",
+        "name":    "Apache Tika Server CLI 2.6.0",
+        "input":   "http://archive.apache.org/dist/tika/2.6.0/tika-server-standard-2.6.0.jar",
         "output":  "tika-server-cli.jar"
     }
 }

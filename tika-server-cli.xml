@@ -4,7 +4,6 @@
     <parsers>
         <parser class="org.apache.tika.parser.DefaultParser">
             <parser-exclude class="org.apache.tika.parser.ocr.TesseractOCRParser"/>
-            <parser-exclude class="org.apache.tika.parser.jdbc.SQLite3Parser"/>
         </parser>
     </parsers>
 </properties>

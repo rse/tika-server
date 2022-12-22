@@ -43,7 +43,7 @@ class TikaServer extends EventEmitter {
             javaOptions:  "-server -Xms1G -Xmx1G",
             tikaBinary:   path.join(__dirname, "tika-server-cli.jar"),
             tikaConfig:   path.join(__dirname, "tika-server-cli.xml"),
-            tikaOptions:  "--log info",
+            tikaOptions:  "",
             tikaHost:     "127.0.0.1",
             tikaPortMin:  41000,
             tikaPortMax:  42000

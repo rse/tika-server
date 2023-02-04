@@ -64,7 +64,7 @@ class TikaServer extends EventEmitter {
         const javaBinary = await new Promise((resolve, reject) => {
             which(this.options.javaBinary).then((filename) => {
                 resolve(filename)
-            }).catch((error) => {
+            }).catch(() => {
                 reject(new Error("unable to find mandatory Java binary " +
                     `"${this.options.javaBinary}" in your $PATH`))
             })

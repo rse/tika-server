@@ -17,7 +17,6 @@
     "homepage": "https://github.com/rse/tika-server",
     "bugs":     "https://github.com/rse/tika-server/issues",
     "devDependencies": {
-        "babel-eslint":            "10.1.0",
         "eslint":                  "8.33.0",
         "eslint-config-standard":  "17.0.0",
         "eslint-plugin-standard":  "5.0.0",

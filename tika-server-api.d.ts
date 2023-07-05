@@ -22,55 +22,57 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-declare class TikaServer {
-    constructor(options?: {
-        javaBinary?: string   /* default: "/usr/opkg/bin/java" */
-        javaOptions?: string  /* default: "-server -Xms1G -Xmx1G" */
-        tikaBinary?: string   /* default: "${__dirname}/tika-server-cli.jar" */
-        tikaConfig?: string   /* default: "${__dirname}/tika-server-cli.xml" */
-        tikaOptions?: string  /* default: "--log info" */
-        tikaHost?: string     /* default: "127.0.0.1" */
-        tikaPortMin?: number  /* default: 41000 */
-        tikaPortMax?: number  /* default: 42000 */
-    })
+declare module "tika-server" {
+    export class TikaServer {
+        constructor(options?: {
+            javaBinary?: string   /* default: "/usr/opkg/bin/java" */
+            javaOptions?: string  /* default: "-server -Xms1G -Xmx1G" */
+            tikaBinary?: string   /* default: "${__dirname}/tika-server-cli.jar" */
+            tikaConfig?: string   /* default: "${__dirname}/tika-server-cli.xml" */
+            tikaOptions?: string  /* default: "--log info" */
+            tikaHost?: string     /* default: "127.0.0.1" */
+            tikaPortMin?: number  /* default: 41000 */
+            tikaPortMax?: number  /* default: 42000 */
+        })
 
-    public on(
-        event: string,
-        callback: (event: any) => void
-    ): void
+        public on(
+            event: string,
+            callback: (event: any) => void
+        ): void
 
-    public start(
-    ): Promise<void>
+        public start(
+        ): Promise<void>
 
-    public query(
-        content: any,
-        options?: {
-            endpoint?: string  /* default: "tika" */
-            type?: string      /* default: "application/octet-stream" */
-            accept?: string    /* default: "text/xml" */
-            response?: string  /* default: "blob" */
-            maxlength: number  /* default: 256 * 1024 * 1024 */
-            filename?: string  /* default: "" */
-        }
-    ): Promise<any>
+        public query(
+            content: any,
+            options?: {
+                endpoint?: string  /* default: "tika" */
+                type?: string      /* default: "application/octet-stream" */
+                accept?: string    /* default: "text/xml" */
+                response?: string  /* default: "blob" */
+                maxlength: number  /* default: 256 * 1024 * 1024 */
+                filename?: string  /* default: "" */
+            }
+        ): Promise<any>
 
-    public queryMeta(
-        content: any,
-        options?: {
-            type?: string      /* default: "application/octet-stream" */
-            filename?: string  /* default: "" */
-        }
-    ): Promise<object>
+        public queryMeta(
+            content: any,
+            options?: {
+                type?: string      /* default: "application/octet-stream" */
+                filename?: string  /* default: "" */
+            }
+        ): Promise<object>
 
-    public queryText(
-        content: any,
-        options?: {
-            type?: string      /* default: "application/octet-stream" */
-            filename?: string  /* default: "" */
-        }
-    ): Promise<string>
+        public queryText(
+            content: any,
+            options?: {
+                type?: string      /* default: "application/octet-stream" */
+                filename?: string  /* default: "" */
+            }
+        ): Promise<string>
 
-    public stop(
-    ): Promise<void>
+        public stop(
+        ): Promise<void>
+    }
 }
 

@@ -4,6 +4,7 @@
     "description": "Apache Tika Server as a Background Service",
     "keywords":    [ "apache", "tika", "server", "background", "service" ],
     "main":        "tika-server-api.js",
+    "types":       "tika-server-api.d.ts",
     "repository": {
         "type": "git",
         "url":  "https://github.com/rse/tika-server.git"

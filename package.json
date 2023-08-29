@@ -7,7 +7,7 @@
     "types":       "tika-server-api.d.ts",
     "repository": {
         "type": "git",
-        "url":  "https://github.com/rse/tika-server.git"
+        "url":  "git+https://github.com/rse/tika-server.git"
     },
     "author": {
         "name":  "Dr. Ralf S. Engelschall",
